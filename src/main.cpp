@@ -38,7 +38,7 @@ int main()
 
   // Read map data
   Map map;
-  if (!read_map_data("../data/map_data.txt", map)) {
+  if (!read_map_data("/Users/HARAN/Desktop/Test_Xcode/Udacity/P3/CarND-Kidnapped-Vehicle-Project/data/map_data.txt", map)) {
 	  cout << "Error: Could not open map file" << endl;
 	  return -1;
   }
@@ -112,6 +112,7 @@ int main()
 
 		  // Update the weights and resample
 		  pf.updateWeights(sensor_range, sigma_landmark, noisy_observations, map);
+            
 		  pf.resample();
 
 		  // Calculate and output the average weighted error of the particle filter over all time steps so far.
